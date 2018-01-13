@@ -1,0 +1,36 @@
+.PatchDisplay {
+    border-bottom: 1px #666 solid;
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    transition: all 0.3s;
+}
+
+.PatchDisplay--selected {
+    background-color: #28600e;
+}
+
+.PatchDisplay:hover {
+    background-color: #3f3f3c;
+}
+
+.PatchDisplay--selected:hover {
+    background-color: #28600e;
+}
+
+.PatchDisplay__name {
+    font-weight: bold;
+    display: block;
+}
+
+.PatchDisplay__ampName {
+    font-size: 14px;
+    display: block;
+    color: #7cadb2;
+}
+
+.PatchDisplay__cloneButton {
+    width: 16px;
+    background: none;
+    border: none;
+}

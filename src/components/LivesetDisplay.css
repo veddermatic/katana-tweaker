@@ -1,0 +1,66 @@
+.Liveset {
+    display: flex;
+    width: 320px;
+    flex-direction: column;
+}
+
+.Liveset__button {
+    background: inherit;
+    border: 1px solid #52AD24;
+    border-radius: 4px;
+    padding: 4px 12px;
+    color: #52AD24;
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.Liveset__buttonIcon {
+    width: 12px;
+    height: 12px;
+    margin-right: 8px;
+}
+
+.Liveset__button--load {
+    color: #FDE167;
+    border-color: #FDE167;
+}
+
+.Liveset__list {
+    background-color: #333;
+    color: #fff;
+    overflow-y: auto;
+    flex: 2;
+}
+
+.Liveset__header {
+    border-bottom: 1px #666 solid;
+    padding: 16px;
+}
+
+.Liveset__header h1 {
+    margin-bottom: 8px;
+}
+
+.Liveset__detail {
+    flex: 1;
+    background-color: #eee;
+    padding: 32px;
+}
+
+.Liveset__nameInput {
+    font-size: 18px;
+    color: #ccc;
+    border: 1px solid #ccc;
+    /* color: #7cadb2; */
+    /* border: 1px solid #7cadb2; */
+    padding: 8px;
+    background-color: inherit;
+    background-image: url(../assets/editIcon_12.svg);
+    background-position: right 8px center;
+    background-repeat: no-repeat;
+    background-size: 12px 12px;
+    width: 100%;
+}
+

@@ -1,0 +1,23 @@
+.Info__heading {
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 40px;
+    color: #666;
+    margin-bottom: 16px;
+}
+.Info__subheading {
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 32px;
+    color: #666;
+    margin-bottom: 16px;
+}
+.Info__content {
+    max-width: 45em;
+    margin-bottom: 16px;
+    font-size: 16px;
+    line-height: 24px;
+}
+a, a:visited {
+    color: #3763d6;
+}

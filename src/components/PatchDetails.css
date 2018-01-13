@@ -1,0 +1,43 @@
+.PatchDetails__input {
+    width: 280px;
+    font-size: 16px;
+    padding: 4px;
+    color: #333;
+}
+
+.PatchDetails__input--large {
+    font-size: 18px;
+}
+
+.PatchDetails__textfieldLabel {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 4px;
+    color: #18656d;
+}
+
+.PatchDetails__button {
+    background-color: inherit;
+    border: 1px solid #060;
+    padding: 8px 24px;
+    font-size: 16px;
+    color: #060;
+    border-radius: 8px;
+    margin-top: 16px;
+}
+.PatchDetails__button:hover {
+    border-color: #393;
+    color: #393;
+    background-color: rgba(128, 255, 128, 0.2);
+}
+.PatchDetails__button:disabled {
+    border-color: #999;
+    color: #999;
+}
+
+.PatchDetails__keyValues dt {
+    margin-top: 8px;
+    margin-bottom: 4px;
+    color: #666;
+    font-size: 14px;
+}

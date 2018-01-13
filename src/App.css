@@ -1,0 +1,58 @@
+.App {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.App__content {
+    display: flex;
+    flex: 1;
+}
+
+.App-header {
+  background-color: #222;
+  padding: 8px 16px 16px;
+  color: #999;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.Dropzone {
+    padding: 24px;
+    text-align: center;
+    padding: 16px;
+    background-color: #F6FBE5;
+    border: 1px dashed #66996C;
+    min-height: 200px;
+    flex: 1;
+}
+
+.Dropzone--active {
+    border-color: #B7762C;
+    background-color: #FBFBC9;
+}
+
+
+.InputGroup {
+    border-bottom: 1px dashed #ccc;
+    padding-bottom: 24px;
+    padding-top: 16px;
+}
+
+.message--error {
+    position: fixed;
+    top: 32px;
+    width: 80%;
+    margin-left: 10%;
+    background-color: #fee;
+    padding: 24px;
+    color: #ba1600;
+    border: 1px solid #ba1600;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
