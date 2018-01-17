@@ -25,7 +25,7 @@ const PatchDetails = ({
         <div className="InputGroup">
             <label className="PatchDetails__textfieldLabel">patch name</label>
             <input
-                maxLength="15"
+                maxLength="16"
                 onChange={ textChange }
                 name="name"
                 className="PatchDetails__input PatchDetails__input--large"
@@ -36,7 +36,7 @@ const PatchDetails = ({
         <div className="InputGroup">
             <label className="PatchDetails__textfieldLabel">notes</label>
             <textarea
-                maxLength="30"
+                maxLength="42"
                 onChange={ textChange }
                 className="PatchDetails__input"
                 name="note"

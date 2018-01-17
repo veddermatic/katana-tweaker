@@ -5,7 +5,7 @@ const Info = () => (
 <div className="Info Liveset__detail">
     <h1 className="Info__heading">What is this thing?</h1>
     <p className="Info__content">
-    Use it to switch amps on patches in a liveset. Basically, if you have a patch you like, but wonder what it would sound like with different amps and bright settings. You cannot edit effects or gain or anything other than the amp model, bright setting, and patch name.
+    Use it to switch amps on patches in a liveset, specifially the sneaky amps. Basically, if you have a patch you like, but wonder what it would sound like with different amps and bright settings. You cannot edit effects or gain or anything other than the amp model, bright setting, and patch name.
     </p>
     <h2 className="Info__subheading">How do I use it?</h2>
     <p className="Info__content">

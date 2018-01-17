@@ -205,6 +205,7 @@ class App extends Component {
                             <section className="Liveset__list">
                                 <header className="Liveset__header">
                                     <input
+                                        maxLength="48"
                                         className="Liveset__nameInput"
                                         onChange={ this.updateLivesetName }
                                         value={ editedLiveset.liveSetData.name }
