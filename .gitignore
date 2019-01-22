@@ -2,6 +2,7 @@
 *.swp
 *.afdesign
 *.tsl
+*.sketch
 
 # dependencies
 /node_modules

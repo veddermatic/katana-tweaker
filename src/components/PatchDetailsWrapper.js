@@ -27,6 +27,13 @@ class PatchDetailsWrapper extends React.Component {
         this.handleSave = this.handleSave.bind( this );
     }
 
+    /**
+     * Updates the internal state of the component when our `patch` prop
+     * is changed from outside.
+     *
+     * @param {object} _new - New props the componet is getting
+     * @param {object} _old - The current props the component is currently rendered with
+     */
     componentWillReceiveProps( _new, _old ) {
         const { patch } = _new;
         if( patch ) {
@@ -36,6 +43,13 @@ class PatchDetailsWrapper extends React.Component {
         }
     }
 
+    /**
+     * Generic function that updates internal state when user changes a form
+     * field value. Both the part of the state and new value are derrived from
+     * the event passed to the function.
+     *
+     * @param {object} syntheticEvent - React event from user input
+     */
     editTextField( syntheticEvent ) {
         const _n = syntheticEvent.target.name;
         const _v = syntheticEvent.target.value;
@@ -48,6 +62,11 @@ class PatchDetailsWrapper extends React.Component {
         });
     }
 
+    /**
+     * Sets the internal state when user click the `bright` checkbox
+     *
+     * @param {object} syntheticEvent - React event from user input
+     */
     editBright( syntheticEvent ) {
         const _v = syntheticEvent.target.checked ? 1 : 0;
         this.setState({
@@ -62,6 +81,11 @@ class PatchDetailsWrapper extends React.Component {
         });
     }
 
+    /**
+     * Sets the internal state when user changes the amp model
+     *
+     * @param {object} syntheticEvent - React event from user input
+     */
     editAmp( syntheticEvent ) {
         const _v = parseInt( syntheticEvent.target.value, 10 );
         this.setState({
@@ -76,6 +100,10 @@ class PatchDetailsWrapper extends React.Component {
         });
     }
 
+    /**
+     * Handles the `save` button being pressed and calls the handler function
+     * we were passed in with the current patch state.
+     */
     handleSave() {
         const { handleSave } = this.props;
         const { _patch } = this.state;

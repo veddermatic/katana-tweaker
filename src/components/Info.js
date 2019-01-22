@@ -1,6 +1,11 @@
 import React from 'react';
 import './Info.css';
 
+/**
+ * Component that rambles on about how to use the app.
+ *
+ * @returns {object} - Static React component
+ */
 const Info = () => (
 <div className="Info Liveset__detail">
     <h1 className="Info__heading">What is this thing?</h1>

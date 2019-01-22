@@ -21,6 +21,9 @@ export const ampNameForId = ampId => {
  */
 export const brightEffectById = ampId => {
     const amp = ampsById[ ampId ];
+    if (!amp) {
+        return 'Unkown'
+    }
     switch( amp.bright ) {
         case 0:
             return 'None';

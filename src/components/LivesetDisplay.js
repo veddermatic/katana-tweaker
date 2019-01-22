@@ -12,7 +12,7 @@ import PatchDetailsWrapper from './PatchDetailsWrapper';
  * @param {object[]} props.liveset - Collection of Katana patches
  * @param {function} props.patchSelected - Handler when user selects a patch
  * @param {number}   props.selectedPatchIndex - Index of the user selected patch
- * @returns {obejct} - React component
+ * @returns {object} - React component
  */
 const LivesetDisplay = ({
     liveset, selectedPatchIndex, patchSelected

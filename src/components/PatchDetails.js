@@ -8,6 +8,8 @@ import './PatchDetails.css';
  * Displays the details of a particular patch and allows editing of certain
  * parameters.
  *
+ * TODO: maybe break out the form components to their own thing?
+ *
  * @param {object} props - Properties for the component
  * @param {object} props.patch - The patch we are displaying
  * @param {function} props.textChange - Function to handle text edits

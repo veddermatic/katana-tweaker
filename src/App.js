@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
-import './components/LivesetDisplay.css';
+
 import Dropzone from 'react-dropzone'
 
 import PatchDisplay from './components/PatchDisplay';
@@ -9,6 +8,10 @@ import ErrorMessage from './components/ErrorMessage';
 import DownloadButton from './components/DownloadButton';
 import LoadFileButton from './components/LoadFileButton';
 import Info from './components/Info';
+
+import './App.css';
+import './components/LivesetDisplay.css';
+
 
 // NOTE: if you want data loaded on app start, uncomment below and set
 //       the initial state `editedLiveset` to `testData`
@@ -30,7 +33,6 @@ class App extends Component {
         this.updateLivesetName = this.updateLivesetName.bind( this );
 
         this.state = {
-            // initialLiveset: false, // for implememnting undo someday
             editedLiveset: false,
             fileError: false,
             fileName: false,
@@ -108,7 +110,7 @@ class App extends Component {
     clonePatchAtIndex( index ) {
         const { editedLiveset: { patchList } } = this.state;
         const _new = Object.assign( {}, patchList[ index ] );
-        _new.name = `!!${_new.name}`;
+        _new.name = `${_new.name} COPY`;
         _new.id = Math.random().toString().slice(2,12); // good enough?
         this.setState({
             editedLiveset: {
@@ -137,8 +139,8 @@ class App extends Component {
     onDrop( acceptedFiles, rejectedFiles ) {
         const _fh = acceptedFiles[0];
         const _name = _fh.name.split('.').slice(0, -1).join('.');
-        const reader = new FileReader();
-        reader.onload = event => {
+        const _reader = new FileReader();
+        _reader.onload = event => {
             try {
                 const json = JSON.parse(event.target.result);
                 this.setState({
@@ -155,32 +157,41 @@ class App extends Component {
                 });
             }
         };
-        reader.onerror = error => {
+        _reader.onerror = error => {
             this.setState({
                 fileError: "The file you provided could not be read for some reason. Sorry!"
             });
         };
-        reader.readAsText( _fh );
+        _reader.readAsText( _fh );
     }
 
+    /**
+     * Toggles the state of the drop zone being shown . hidden
+     */
     toggleDropzone() {
         this.setState({
             showDropzone: !this.state.showDropzone
         });
     }
 
-    // credit to volzo at: https://stackoverflow.com/a/30800715/167655
+    /**
+     * Forces a file download of the current TSL data in app state
+     * credit to volzo at: https://stackoverflow.com/a/30800715/167655
+     */
     saveJSON() {
         const _data = this.state.editedLiveset;
         const _saveName = this.state.fileName + '.edited.tsl';
         const _output = "data:text/json;charset=utf-8," + encodeURIComponent( JSON.stringify( _data ) );
-        const downloadAnchorNode = document.createElement('a');
-        downloadAnchorNode.setAttribute("href",     _output);
-        downloadAnchorNode.setAttribute("download", _saveName);
-        downloadAnchorNode.click();
-        downloadAnchorNode.remove();
+        const _downloadAnchorNode = document.createElement('a');
+        _downloadAnchorNode.setAttribute("href",     _output);
+        _downloadAnchorNode.setAttribute("download", _saveName);
+        _downloadAnchorNode.click();
+        _downloadAnchorNode.remove();
     }
 
+    /**
+     * Renders the app =)
+     */
     render() {
         const {
             fileError, editedLiveset, selectedPatchIndex, showDropzone,
